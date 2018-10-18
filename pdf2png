@@ -1,0 +1,4 @@
+#!/bin/bash
+DENSITY=300
+PNGSIZE=1920x1080
+gm convert -density $DENSITY $1 -geometry $PNGSIZE +adjoin png:$(basename ${1%.pdf})-%03d.png
